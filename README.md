@@ -242,11 +242,11 @@ OpenLane will automatically perform:
 <tr>
 
 <td>
-<img src="Layout_cmd.jpg" width="500">
+<img src="Layout_cmd.jpg" width="600">
 </td>
 
 <td>
-<img src="Layout_terminal.jpg" width="500">
+<img src="Layout_terminal.jpg" width="600">
 </td>
 
 </tr>
@@ -254,11 +254,11 @@ OpenLane will automatically perform:
 <tr>
 
 <td>
-<img src="Layout_terminal_next.jpg" width="500">
+<img src="Layout_terminal_next.jpg" width="600">
 </td>
 
 <td>
-<img src="Layout_terminal_next2.jpg" width="500">
+<img src="Layout_terminal_next2.jpg" width="600">
 </td>
 
 </tr>
@@ -266,7 +266,7 @@ OpenLane will automatically perform:
 <tr>
 
 <td colspan="2" align="center">
-<img src="Layout_terminal_next3.jpg" width="500">
+<img src="Layout_terminal_next3.jpg" width="600">
 </td>
 
 </tr>
