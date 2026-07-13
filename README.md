@@ -4,13 +4,9 @@ MAC Unit RTL to GDSII
 
 A Multiply–Accumulate (MAC) unit is adigital  hardware block, essential to (DSPs) and computers, that computes the sum of products of two numbers (DSP) in a single clock cycle. 
 
-It increases speed for algorithms requiring frequent multiplication and addition, such as convolutional neural networks , digital filtering, and Fast Fourier Transforms.
-
-Here I have demosntrated the ASIC implementation ***RTL to GDSII*** roadmap to implement your own MAC unit. 
-
 After working on Ubuntu, Cadence and Azure I would suggest to work on all to get better persepctive towards RTL designing some offfer smooth GUI but complex terminal while other offers smooth terminal cmd but no GUI :) . 
 
-The objective of this project is to demonstrate the complete digital IC design methodology, including RTL development, functional verification, synthesis, physical implementation, timing analysis, and layout generation.
+Here I have demosntrated the ASIC implementation ***RTL to GDSII*** roadmap to implement your own MAC unit. 
 
 The general steps towards design are merely same just commands on terminal vary a little. 
 
@@ -124,11 +120,37 @@ It will start executing all the steps.
   <img src="Layout_terminal_next3.jpg" width="650">
 </p>
 
+You may get some warnings but for now ignore them just main thing is to get ***SUCCESS : Flow Complete*** and no setup and hold violations. 
+
 Step 11 : Go back to original MAC_unit directory and type the command
 
-**find . -name** ** "*gds" **
+find . -name "*gds"   
 
+It will open the list of files stored in **runs** find the gds usually its on top copy its path and in terminal type the command to open klayout view. 
 
+**klayout pathlocation**
+
+<p align="left">
+  <img src="GDS_view.jpg" width="650">
+</p>
+
+After this the klayout will open 
+
+<p align="left">
+  <img src="klayout_mac.jpg" width="650">
+  <br>
+  <b>Klayout View</b>
+</p>
+
+Open the files and trace the location of GDS file you will find the file copy that and paste on desktop or you may transfer that in local windows for general share. 
+
+<p align="left">
+  <img src="GDS_3D.jpg" width="650">
+  <br>
+  <b>3D view of GDS</b>
+</p>
+
+After this the implementation is done now you can track the warning and customize your design and scale it into array, systoilic architectures depeding on your utilization. 
 
 
 
