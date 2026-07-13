@@ -144,8 +144,10 @@ After this the klayout will open
 
 Open the files and trace the location of GDS file you will find the file copy that and paste on desktop or you may transfer that in local windows for general share. 
 
+Open [Tiny Tapeout GDS Viewer](https://gds-viewer.tinytapeout.com/) and put your GDS file here adjust setting and Yayy you have got your GDS 3D view. 
+
 <p align="left">
-  <img src="GDS_3D.jpg" width="650">
+  <img src="GDS_3D.png" width="650">
   <br>
   <b>3D view of GDS</b>
 </p>
