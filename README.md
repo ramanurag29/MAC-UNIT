@@ -90,7 +90,67 @@ The gtkwave will appear select ***tb_mac_unit*** on top left and select the requ
   <b>Gtkwave View</b>
 </p>
 
+Now you have to execute the Layout view
 
+Step 10 : Go back to home : 
+
+**cd ~/OpenLane**
+
+**make mount**
+
+You will now reach OpenLane Container there type the below command : 
+
+<p align="center">
+  <img src="Layout_cmd.jpg" width="850">
+  <br>
+  <b>Layout Commands</b>
+</p>
+
+<p align="center">
+  <img src="Layout_terminal.jpg" width="850">
+  <br>
+  <b>Commands Executions FLow P1</b>
+</p>
+
+<p align="center">
+  <img src="Layout_terminal_next.jpg" width="850">
+  <br>
+  <b>Commands Executions FLow P2</b>
+</p>
+
+<p align="center">
+  <img src="Layout_terminal_next2.jpg" width="850">
+  <br>
+  <b>Commands Executions FLow P3</b>
+</p>
+
+<p align="center">
+  <img src="Layout_terminal_next3.jpg" width="850">
+  <br>
+  <b>Commands Executions FLow P4</b>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**./flow.tcl -design MAC_unit**
+
+It will start executing all the steps. 
 
 
 
