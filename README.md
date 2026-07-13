@@ -1,167 +1,374 @@
-<h1 align="center">
-MAC Unit RTL to GDSII
-</h1>
-
-A Multiply–Accumulate (MAC) unit is adigital  hardware block, essential to (DSPs) and computers, that computes the sum of products of two numbers (DSP) in a single clock cycle. 
-
-Here I have demosntrated the ASIC implementation ***RTL to GDSII*** roadmap to implement your own MAC unit in ***Ubuntu OpenLane***. 
-
-The general steps towards design are merely same just commands on terminal vary a little. 
-
-<p align="left">
-  <img src="mac_architecture.jpg" width="250">
-  <br>
-  <b>MAC Unit Architecture</b>
-</p>
-
-Go to the OpenLane Folder and follow these commands. 
-
-Step 1 : Create a directory : **mkdir MAC_unit**
-
-Step 2 : Go to that directory : **cd MAC_unit**
-
-You can also check any folder if created using command **ls** to see available files in particular directory. 
-
-Step 3 : Create a new directory named src and do all codes here : **mkdir src**
-
-Here you have to create your cla.v, multiplier.v, acc.v, mac.v & mac_tb.v using gedit command. 
-
-Step 4 : Create cla.v : **gedit cla.v**
-
-Here a new window will appear and put the respective cla adder code here and then save it, close the window and you will return to terminal again. 
-
-Type **ls** and enter you will see a new file **cla.v** there. 
-
-Step 5 : Repeate this process for rest files each time type **gedit "filename"** and window will appear put the codes. 
-
-After all 5 files again hit ls and you will see all 5 files there. 
-
-Note these 5 files should be under src.
-
-Step 6 : Change directory and go back to MAC_unit : **cd ..**
-
-After that command now you are in MAC_unit directory again here create config.json and put its code. 
-
-Step 7 : Create config.json : **gedit config.json**
-
-Put the respective config code provided.
-
-So a generic view till here would be as provided. 
+<h1 align="center">🖥️ MAC Unit RTL → GDSII</h1>
 
 <p align="center">
-  <img src="terminal_view.jpg" width="850">
-  <br>
-  <b>Terminal View</b>
+<b>Complete ASIC Implementation using Verilog HDL, OpenLane & Sky130 PDK</b>
 </p>
-
-The **runs, dump_vcd, mac_sim** will be created automatically for simulation and gtkwave analysis. 
-
-Step 8 : Do the simulation part , continuing to work in src directory and type these two commands in terminal. : 
-
-**iverilog -o mac_sim acc.v cla.v multiplier.v mac.v mac_tb.v**
-
-**vvp_sim**
-
-Then you will get the simulation results
 
 <p align="center">
-  <img src="terminal_sim.jpg" width="850">
-  <br>
-  <b>Terminal SImulation</b>
+
+![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
+![OpenLane](https://img.shields.io/badge/OpenLane-ASIC-green)
+![Sky130](https://img.shields.io/badge/PDK-Sky130-orange)
+![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E95420)
+
 </p>
 
-Step 9 : Now for Gtkwave : **gtkwave dump.vcd**
+---
 
-The gtkwave will appear select ***tb_mac_unit*** on top left and select the required signals from waveform and adjust the maginfier to trace waveforms properly. 
+# 📖 Overview
+
+A **Multiply–Accumulate (MAC)** unit is a digital hardware block widely used in **Digital Signal Processing (DSP)** and computer architectures. It computes the multiplication of two input operands followed by accumulation, making it one of the fundamental building blocks for DSP, AI accelerators, convolution operations, FIR filters, FFTs, and many embedded computing applications.
+
+This repository demonstrates the complete **RTL → GDSII** ASIC implementation flow of a custom **4-bit MAC Unit** using **Ubuntu**, **OpenLane**, and the **Sky130 Process Design Kit (PDK)**.
+
+The overall ASIC implementation flow remains the same across platforms (Ubuntu, Azure VM, etc.); only the installation and terminal commands vary slightly.
+
+---
+
+# 🏗 MAC Unit Architecture
 
 <p align="center">
-  <img src="waveform_mac.jpg" width="850">
-  <br>
-  <b>Gtkwave View</b>
+<img src="images/mac_architecture.jpg" width="600">
 </p>
 
-Now you have to execute the Layout view
-
-Step 10 : Go back to home : 
-
-**cd ~/OpenLane**
-
-**make mount**
-
-You will now reach OpenLane Container there type the below command : 
-
-**./flow.tcl -design MAC_unit**
-
-It will start executing all the steps. 
-
-<p align="left">
-  <img src="Layout_cmd.jpg" width="650">
+<p align="center">
+<b>Figure 1.</b> MAC Unit Block Diagram
 </p>
 
-<p align="left">
-  <img src="Layout_terminal.jpg" width="650">
+---
+
+# 📂 Project Setup
+
+Navigate to the **OpenLane** directory and follow the steps below.
+
+<table>
+
+<tr>
+<th width="15%">Step</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td><b>Step 1</b></td>
+<td>
+
+Create a new project directory.
+
+<pre><code>mkdir MAC_unit</code></pre>
+
+</td>
+</tr>
+
+<tr>
+<td><b>Step 2</b></td>
+<td>
+
+Move into the project directory.
+
+<pre><code>cd MAC_unit</code></pre>
+
+</td>
+</tr>
+
+<tr>
+<td><b>Step 3</b></td>
+<td>
+
+Create the <code>src</code> directory.
+
+<pre><code>mkdir src</code></pre>
+
+</td>
+</tr>
+
+<tr>
+<td><b>Step 4</b></td>
+<td>
+
+Move into the source directory and create the CLA module.
+
+<pre><code>cd src
+gedit cla.v</code></pre>
+
+Paste the CLA Verilog code, save the file, and close the editor.
+
+</td>
+</tr>
+
+<tr>
+<td><b>Step 5</b></td>
+<td>
+
+Repeat the same process for:
+
+<ul>
+
+<li><code>multiplier.v</code></li>
+
+<li><code>acc.v</code></li>
+
+<li><code>mac.v</code></li>
+
+<li><code>mac_tb.v</code></li>
+
+</ul>
+
+After creating each file, verify using
+
+<pre><code>ls</code></pre>
+
+</td>
+</tr>
+
+<tr>
+<td><b>Step 6</b></td>
+<td>
+
+Return to the project directory.
+
+<pre><code>cd ..</code></pre>
+
+</td>
+</tr>
+
+<tr>
+<td><b>Step 7</b></td>
+<td>
+
+Create the OpenLane configuration file.
+
+<pre><code>gedit config.json</code></pre>
+
+Paste the configuration code and save it.
+
+</td>
+</tr>
+
+</table>
+
+---
+
+# 💻 Project Directory Structure
+
+After completing the above steps, your directory should appear similar to the following.
+
+<p align="center">
+<img src="images/terminal_view.jpg" width="900">
 </p>
 
-<p align="left">
-  <img src="Layout_terminal_next.jpg" width="650">
+<p align="center">
+<b>Figure 2.</b> Project Directory Structure
 </p>
 
-<p align="left">
-  <img src="Layout_terminal_next2.jpg" width="650">
+> **Note:** The files **mac_sim**, **dump.vcd**, and the **runs** directory will be generated automatically during simulation and OpenLane execution.
+
+---
+
+# 🧪 RTL Simulation
+
+Move into the **src** directory and compile the design.
+
+```bash
+iverilog -o mac_sim acc.v cla.v multiplier.v mac.v mac_tb.v
+```
+
+Run the simulation.
+
+```bash
+vvp mac_sim
+```
+
+After successful execution, the terminal should display the simulation output.
+
+<p align="center">
+<img src="images/terminal_sim.jpg" width="900">
 </p>
 
-<p align="left">
-  <img src="Layout_terminal_next3.jpg" width="650">
+<p align="center">
+<b>Figure 3.</b> RTL Simulation Output
 </p>
 
-You may get some warnings but for now ignore them just main thing is to get ***SUCCESS : Flow Complete*** and no setup and hold violations. 
+---
 
-Step 11 : Go back to original MAC_unit directory and type the command
+# 📈 GTKWave Verification
 
-find . -name "*gds"   
+Open the waveform.
 
-It will open the list of files stored in **runs** find the gds usually its on top copy its path and in terminal type the command to open klayout view. 
+```bash
+gtkwave dump.vcd
+```
 
-**klayout pathlocation**
+Inside GTKWave:
 
-<p align="left">
-  <img src="GDS_view.jpg" width="650">
+- Select **tb_mac_unit**
+- Add the required signals
+- Adjust the zoom level to inspect the waveform
+
+<p align="center">
+<img src="images/waveform_mac.jpg" width="900">
 </p>
 
-After this the klayout will open 
-
-<p align="left">
-  <img src="klayout_mac.jpg" width="650">
-  <br>
-  <b>Klayout View</b>
+<p align="center">
+<b>Figure 4.</b> GTKWave Verification
 </p>
 
-Open the files and trace the location of GDS file you will find the file copy that and paste on desktop or you may transfer that in local windows for general share. 
+---
 
-Open [Tiny Tapeout GDS Viewer](https://gds-viewer.tinytapeout.com/) and put your GDS file here adjust setting and Yayy you have got your GDS 3D view. 
+# ⚙️ RTL → GDSII Flow
 
-<p align="left">
-  <img src="GDS_3D.png" width="650">
-  <br>
-  <b>3D view of GDS</b>
+Return to the **OpenLane** directory.
+
+```bash
+cd ~/OpenLane
+```
+
+Launch the Docker container.
+
+```bash
+make mount
+```
+
+Run the complete OpenLane flow.
+
+```bash
+./flow.tcl -design MAC_unit
+```
+
+OpenLane will automatically perform:
+
+- RTL Elaboration
+- Logic Synthesis
+- Floorplanning
+- Placement
+- Clock Tree Synthesis
+- Routing
+- DRC
+- LVS
+- GDSII Generation
+
+<table>
+
+<tr>
+
+<td>
+<img src="images/Layout_cmd.jpg" width="430">
+</td>
+
+<td>
+<img src="images/Layout_terminal.jpg" width="430">
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<img src="images/Layout_terminal_next.jpg" width="430">
+</td>
+
+<td>
+<img src="images/Layout_terminal_next2.jpg" width="430">
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" align="center">
+<img src="images/Layout_terminal_next3.jpg" width="700">
+</td>
+
+</tr>
+
+</table>
+
+> Ignore minor warnings if present. The important message is:
+
+```text
+SUCCESS : Flow Complete
+```
+
+---
+
+# 🏛 KLayout Visualization
+
+Locate the generated GDSII file.
+
+```bash
+find . -name "*.gds"
+```
+
+Open the generated layout.
+
+```bash
+klayout <path_to_gds_file>
+```
+
+<p align="center">
+<img src="images/GDS_view.jpg" width="850">
 </p>
 
-After this the implementation is done now you can track the warning and customize your design and scale it into array, systoilic architectures depeding on your utilization. 
+<p align="center">
+<b>Figure 5.</b> Generated GDSII File
+</p>
 
+<p align="center">
+<img src="images/klayout_mac.jpg" width="750">
+</p>
 
+<p align="center">
+<b>Figure 6.</b> KLayout View
+</p>
 
+---
 
+# 🌐 3D GDS Visualization
 
+Copy the generated **.gds** file and upload it to
 
+**Tiny Tapeout GDS Viewer**
 
+https://gds-viewer.tinytapeout.com/
 
+<p align="center">
+<img src="images/GDS_3D.png" width="700">
+</p>
 
+<p align="center">
+<b>Figure 7.</b> 3D Visualization of the Final GDSII Layout
+</p>
 
+---
 
+# 📁 Source Files
 
+The project consists of the following Verilog modules.
 
+| File | Description |
+|------|-------------|
+| `multiplier.v` | Sequential Shift-and-Add Multiplier |
+| `cla.v` | 17-bit Carry Lookahead Adder |
+| `acc.v` | 17-bit Accumulator |
+| `mac.v` | Top-level MAC Module |
+| `mac_tb.v` | Functional Testbench |
+| `config.json` | OpenLane Configuration |
 
+---
 
+# 🎯 Conclusion
 
+The complete **RTL → GDSII** implementation of the **MAC Unit** has been successfully demonstrated.
 
+This design can be further extended into:
 
+- ✅ Multi-MAC Arrays
+- ✅ Pipelined Architectures
+- ✅ Systolic Arrays
+- ✅ Matrix Multiplication Engines
+- ✅ CNN / AI Accelerators
+- ✅ FPGA Implementations
+
+---
+
+Electronics & Communication Engineering  
+University of Delhi
