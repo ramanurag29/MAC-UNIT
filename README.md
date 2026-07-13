@@ -14,10 +14,6 @@ The general steps towards design are merely same just commands on terminal vary 
   <b>MAC Unit Architecture</b>
 </p>
 
-This project is carried out on two different platforms i.e Ubuntu OpenLane and Azure OpenLane in Powershell. 
-
-Commands are almost similar to use but a core format to follow is provided below. 
-
 Go to the OpenLane Folder and follow these commands. 
 
 Step 1 : Create a directory : **mkdir MAC_unit**
