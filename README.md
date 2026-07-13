@@ -17,7 +17,7 @@
 
 # 📖 Overview
 
-A **Multiply–Accumulate (MAC)** unit is a digital hardware block widely used in **Digital Signal Processing (DSP)** and computer architectures. It computes the multiplication of two input operands followed by accumulation, making it one of the fundamental building blocks for DSP, AI accelerators, convolution operations, FIR filters, FFTs, and many embedded computing applications.
+A **Multiply–Accumulate (MAC)** unit is a digital hardware block widely used in **Digital Signal Processing (DSP)** and computer architectures. 
 
 This repository demonstrates the complete **RTL → GDSII** ASIC implementation flow of a custom **4-bit MAC Unit** using **Ubuntu**, **OpenLane**, and the **Sky130 Process Design Kit (PDK)**.
 
@@ -25,10 +25,10 @@ The overall ASIC implementation flow remains the same across platforms (Ubuntu, 
 
 ---
 
-# 🏗 MAC Unit Architecture
+# MAC Unit Architecture
 
 <p align="center">
-<img src="images/mac_architecture.jpg" width="600">
+<img src="mac_architecture.jpg" width="600">
 </p>
 
 <p align="center">
@@ -37,7 +37,7 @@ The overall ASIC implementation flow remains the same across platforms (Ubuntu, 
 
 ---
 
-# 📂 Project Setup
+# Project Setup
 
 Navigate to the **OpenLane** directory and follow the steps below.
 
@@ -148,23 +148,7 @@ Paste the configuration code and save it.
 
 ---
 
-# 💻 Project Directory Structure
-
-After completing the above steps, your directory should appear similar to the following.
-
-<p align="center">
-<img src="images/terminal_view.jpg" width="900">
-</p>
-
-<p align="center">
-<b>Figure 2.</b> Project Directory Structure
-</p>
-
-> **Note:** The files **mac_sim**, **dump.vcd**, and the **runs** directory will be generated automatically during simulation and OpenLane execution.
-
----
-
-# 🧪 RTL Simulation
+# RTL Simulation
 
 Move into the **src** directory and compile the design.
 
@@ -190,7 +174,7 @@ After successful execution, the terminal should display the simulation output.
 
 ---
 
-# 📈 GTKWave Verification
+# GTKWave Verification
 
 Open the waveform.
 
@@ -205,7 +189,7 @@ Inside GTKWave:
 - Adjust the zoom level to inspect the waveform
 
 <p align="center">
-<img src="images/waveform_mac.jpg" width="900">
+<img src="waveform_mac.jpg" width="900">
 </p>
 
 <p align="center">
@@ -214,7 +198,7 @@ Inside GTKWave:
 
 ---
 
-# ⚙️ RTL → GDSII Flow
+# RTL → GDSII Flow
 
 Return to the **OpenLane** directory.
 
@@ -251,11 +235,11 @@ OpenLane will automatically perform:
 <tr>
 
 <td>
-<img src="images/Layout_cmd.jpg" width="430">
+<img src="Layout_cmd.jpg" width="430">
 </td>
 
 <td>
-<img src="images/Layout_terminal.jpg" width="430">
+<img src="Layout_terminal.jpg" width="430">
 </td>
 
 </tr>
@@ -263,11 +247,11 @@ OpenLane will automatically perform:
 <tr>
 
 <td>
-<img src="images/Layout_terminal_next.jpg" width="430">
+<img src="Layout_terminal_next.jpg" width="430">
 </td>
 
 <td>
-<img src="images/Layout_terminal_next2.jpg" width="430">
+<img src="Layout_terminal_next2.jpg" width="430">
 </td>
 
 </tr>
@@ -275,7 +259,7 @@ OpenLane will automatically perform:
 <tr>
 
 <td colspan="2" align="center">
-<img src="images/Layout_terminal_next3.jpg" width="700">
+<img src="Layout_terminal_next3.jpg" width="700">
 </td>
 
 </tr>
@@ -290,7 +274,7 @@ SUCCESS : Flow Complete
 
 ---
 
-# 🏛 KLayout Visualization
+# KLayout Visualization
 
 Locate the generated GDSII file.
 
@@ -305,7 +289,7 @@ klayout <path_to_gds_file>
 ```
 
 <p align="center">
-<img src="images/GDS_view.jpg" width="850">
+<img src="GDS_view.jpg" width="850">
 </p>
 
 <p align="center">
@@ -313,7 +297,7 @@ klayout <path_to_gds_file>
 </p>
 
 <p align="center">
-<img src="images/klayout_mac.jpg" width="750">
+<img src="klayout_mac.jpg" width="750">
 </p>
 
 <p align="center">
@@ -322,7 +306,7 @@ klayout <path_to_gds_file>
 
 ---
 
-# 🌐 3D GDS Visualization
+# 3D GDS Visualization
 
 Copy the generated **.gds** file and upload it to
 
@@ -331,7 +315,7 @@ Copy the generated **.gds** file and upload it to
 https://gds-viewer.tinytapeout.com/
 
 <p align="center">
-<img src="images/GDS_3D.png" width="700">
+<img src="GDS_3D.png" width="700">
 </p>
 
 <p align="center">
@@ -340,7 +324,7 @@ https://gds-viewer.tinytapeout.com/
 
 ---
 
-# 📁 Source Files
+# Source Files
 
 The project consists of the following Verilog modules.
 
@@ -355,7 +339,7 @@ The project consists of the following Verilog modules.
 
 ---
 
-# 🎯 Conclusion
+# Conclusion
 
 The complete **RTL → GDSII** implementation of the **MAC Unit** has been successfully demonstrated.
 
@@ -369,6 +353,3 @@ This design can be further extended into:
 - ✅ FPGA Implementations
 
 ---
-
-Electronics & Communication Engineering  
-University of Delhi
