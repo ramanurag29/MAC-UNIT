@@ -100,34 +100,30 @@ Step 10 : Go back to home :
 
 You will now reach OpenLane Container there type the below command : 
 
+**./flow.tcl -design MAC_unit**
+
+It will start executing all the steps. 
+
 <p align="center">
-  <img src="Layout_cmd.jpg" width="850">
+  <img src="Layout_cmd.jpg" width="450">
   <br>
   <b>Layout Commands</b>
 </p>
 
 <p align="center">
-  <img src="Layout_terminal.jpg" width="850">
-  <br>
-  <b>Commands Executions FLow P1</b>
+  <img src="Layout_terminal.jpg" width="450">
 </p>
 
 <p align="center">
-  <img src="Layout_terminal_next.jpg" width="850">
-  <br>
-  <b>Commands Executions FLow P2</b>
+  <img src="Layout_terminal_next.jpg" width="450">
 </p>
 
 <p align="center">
-  <img src="Layout_terminal_next2.jpg" width="850">
-  <br>
-  <b>Commands Executions FLow P3</b>
+  <img src="Layout_terminal_next2.jpg" width="450">
 </p>
 
 <p align="center">
-  <img src="Layout_terminal_next3.jpg" width="850">
-  <br>
-  <b>Commands Executions FLow P4</b>
+  <img src="Layout_terminal_next3.jpg" width="450">
 </p>
 
 
@@ -148,9 +144,6 @@ You will now reach OpenLane Container there type the below command :
 
 
 
-**./flow.tcl -design MAC_unit**
-
-It will start executing all the steps. 
 
 
 
