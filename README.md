@@ -104,26 +104,24 @@ You will now reach OpenLane Container there type the below command :
 
 It will start executing all the steps. 
 
-<p align="center">
-  <img src="Layout_cmd.jpg" width="450">
-  <br>
-  <b>Layout Commands</b>
+<p align="left">
+  <img src="Layout_cmd.jpg" width="650">
 </p>
 
-<p align="center">
-  <img src="Layout_terminal.jpg" width="450">
+<p align="left">
+  <img src="Layout_terminal.jpg" width="650">
 </p>
 
-<p align="center">
-  <img src="Layout_terminal_next.jpg" width="450">
+<p align="left">
+  <img src="Layout_terminal_next.jpg" width="650">
 </p>
 
-<p align="center">
-  <img src="Layout_terminal_next2.jpg" width="450">
+<p align="left">
+  <img src="Layout_terminal_next2.jpg" width="650">
 </p>
 
-<p align="center">
-  <img src="Layout_terminal_next3.jpg" width="450">
+<p align="left">
+  <img src="Layout_terminal_next3.jpg" width="650">
 </p>
 
 
