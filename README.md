@@ -1,4 +1,4 @@
-<h1 align="center">🖥️ MAC Unit RTL → GDSII</h1>
+<h1 align="center"> MAC Unit RTL → GDSII</h1>
 
 <p align="center">
 <b>Complete ASIC Implementation using Verilog HDL, OpenLane & Sky130 PDK</b>
