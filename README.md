@@ -36,7 +36,7 @@ Step 3 : Create a new directory named src and do all codes here : **mkdir src**
 
 Here you have to create your cla.v, multiplier.v, acc.v, mac.v & mac_tb.v using gedit command. 
 
-Step 4 : Create adder.v : **gedit cla.v**
+Step 4 : Create cla.v : **gedit cla.v**
 
 Here a new window will appear and put the respective cla adder code here and then save it, close the window and you will return to terminal again. 
 
@@ -64,7 +64,9 @@ So a generic view till here would be as provided.
   <b>Terminal View</b>
 </p>
 
-Step 8 : Do the simulation part , continuing to work in src directory : 
+The **runs, dump_vcd, mac_sim** will be created automatically for simulation and gtkwave analysis. 
+
+Step 8 : Do the simulation part , continuing to work in src directory and type these two commands in terminal. : 
 
 **iverilog -o mac_sim acc.v cla.v multiplier.v mac.v mac_tb.v**
 
@@ -78,8 +80,15 @@ Then you will get the simulation results
   <b>Terminal SImulation</b>
 </p>
 
+Step 9 : Now for Gtkwave : **gtkwave dump.vcd**
 
+The gtkwave will appear select ***tb_mac_unit*** on top left and select the required signals from waveform and adjust the maginfier to trace waveforms properly. 
 
+<p align="center">
+  <img src="waveform_mac.jpg" width="850">
+  <br>
+  <b>Gtkwave View</b>
+</p>
 
 
 
