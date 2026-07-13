@@ -124,7 +124,9 @@ It will start executing all the steps.
   <img src="Layout_terminal_next3.jpg" width="650">
 </p>
 
+Step 11 : Go back to original MAC_unit directory and type the command
 
+**find . -name** ** "*gds" **
 
 
 
