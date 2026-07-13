@@ -56,7 +56,19 @@ So a generic view till here would be as provided.
   <b>Terminal View</b>
 </p>
 
+Step 8 : Do the simulation part , continuing to work in src directory : 
 
+**iverilog -o mac_sim acc.v cla.v multiplier.v mac.v mac_tb.v**
+
+**vvp_sim**
+
+Then you will get the simulation results
+
+<p align="center">
+  <img src="terminal_sim.jpg" width="850">
+  <br>
+  <b>Terminal SImulation</b>
+</p>
 
 
 
