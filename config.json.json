@@ -1,0 +1,19 @@
+config.json code
+
+{
+    "DESIGN_NAME": "mac_unit",
+
+    "VERILOG_FILES": [
+        "dir::src/acc.v",
+        "dir::src/cla.v",
+        "dir::src/multiplier.v",
+        "dir::src/mac.v"
+    ],
+
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10,
+
+    "FP_CORE_UTIL": 35,
+
+    "PL_TARGET_DENSITY": 0.55
+}
