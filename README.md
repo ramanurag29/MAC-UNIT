@@ -17,27 +17,42 @@ This project is carried out on two different platforms i.e Ubuntu OpenLane and A
 Go to the OpenLane Folder and follow these commands. 
 
 Step 1 : Create a directory : mkdir MAC_unit
+
 Step 2 : Go to that directory : cd MAC_unit
+
 You can also check any folder if created using command "ls" to see available files in particular directory. 
 
 Step 3 : Create a new directory named src and do all codes here : mkdir src 
+
 Here you have to create your cla.v, multiplier.v, acc.v, mac.v & mac_tb.v using gedit command. 
 
 Step 4 : Create adder.v : gedit cla.v 
+
 Here a new window will appear and put the respective cla adder code here and then save it, close the window and you will return to terminal again. 
+
 Type "ls" and enter you will see a new file "cla.v" there. 
 
 Step 5 : Repeate this process for rest files each time type gedit "filename" and window will appear put the codes. 
+
 After all 5 files again hit ls and you will see all 5 files there. 
+
 Note these 5 files should be under src.
 
 Step 6 : Change directory and go back to MAC_unit : cd ..
+
 After that command now you are in MAC_unit directory again here create config.json and put its code. 
 
 Step 7 : Create config.json : gedit config.json 
+
 Put the respective config code provided.
 
-Put 
+So a generic view till here would be as provided. 
+
+<p align="center">
+  <img src="terminal_view.jpg" width="450">
+  <br>
+  <b>MAC Unit Architecture</b>
+</p>
 
 
 
