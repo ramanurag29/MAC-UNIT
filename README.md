@@ -6,3 +6,9 @@ Here I have demosntrated the ASIC implementation RTL to GDSII roadmap to impleme
 The objective of this project is to demonstrate the complete digital IC design methodology, including RTL development, functional verification, synthesis, physical implementation, timing analysis, and layout generation.
 
 The general steps towards design are merely same just commands on terminal vary a little. 
+
+<p align="center">
+  <img src="mac_architecture.jpeg" width="700">
+  <br>
+  <b>Figure 1: MAC Unit Architecture</b>
+</p>
