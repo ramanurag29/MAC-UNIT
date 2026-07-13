@@ -149,6 +149,10 @@ Paste the configuration code and save it.
 <td>
 <img src="terminal_view.jpg" width="500">
 </td>
+
+<p align="center">
+<b>Figure 2.</b> Terminal View
+</p>
 ---
 
 # RTL Simulation
