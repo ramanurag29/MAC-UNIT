@@ -4,9 +4,7 @@ MAC Unit RTL to GDSII
 
 A Multiply–Accumulate (MAC) unit is adigital  hardware block, essential to (DSPs) and computers, that computes the sum of products of two numbers (DSP) in a single clock cycle. 
 
-After working on Ubuntu, Cadence and Azure I would suggest to work on all to get better persepctive towards RTL designing some offfer smooth GUI but complex terminal while other offers smooth terminal cmd but no GUI :) . 
-
-Here I have demosntrated the ASIC implementation ***RTL to GDSII*** roadmap to implement your own MAC unit. 
+Here I have demosntrated the ASIC implementation ***RTL to GDSII*** roadmap to implement your own MAC unit in ***Ubuntu OpenLane***. 
 
 The general steps towards design are merely same just commands on terminal vary a little. 
 
