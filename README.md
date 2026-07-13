@@ -10,5 +10,5 @@ The general steps towards design are merely same just commands on terminal vary 
 <p align="center">
   <img src="mac_architecture.jpg" width="700">
   <br>
-  <b>Figure 1: MAC Unit Architecture</b>
+  <b>MAC Unit Architecture</b>
 </p>
