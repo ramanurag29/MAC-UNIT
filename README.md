@@ -7,8 +7,8 @@ The objective of this project is to demonstrate the complete digital IC design m
 
 The general steps towards design are merely same just commands on terminal vary a little. 
 
-<p align="center">
-  <img src="mac_architecture.jpg" width="350">
+<p align="left">
+  <img src="mac_architecture.jpg" width="250">
   <br>
   <b>MAC Unit Architecture</b>
 </p>
