@@ -15,7 +15,7 @@
 
 ---
 
-# 📖 Overview
+# Overview
 
 A **Multiply–Accumulate (MAC)** unit is a digital hardware block widely used in **Digital Signal Processing (DSP)** and computer architectures. 
 
@@ -28,7 +28,7 @@ The overall ASIC implementation flow remains the same across platforms (Ubuntu, 
 # MAC Unit Architecture
 
 <p align="center">
-<img src="mac_architecture.jpg" width="600">
+<img src="mac_architecture.jpg" width="350">
 </p>
 
 <p align="center">
@@ -146,6 +146,9 @@ Paste the configuration code and save it.
 
 </table>
 
+<td>
+<img src="terminal_view.jpg" width="500">
+</td>
 ---
 
 # RTL Simulation
@@ -165,7 +168,7 @@ vvp mac_sim
 After successful execution, the terminal should display the simulation output.
 
 <p align="center">
-<img src="images/terminal_sim.jpg" width="900">
+<img src="terminal_sim.jpg" width="700">
 </p>
 
 <p align="center">
@@ -189,7 +192,7 @@ Inside GTKWave:
 - Adjust the zoom level to inspect the waveform
 
 <p align="center">
-<img src="waveform_mac.jpg" width="900">
+<img src="waveform_mac.jpg" width="700">
 </p>
 
 <p align="center">
@@ -235,11 +238,11 @@ OpenLane will automatically perform:
 <tr>
 
 <td>
-<img src="Layout_cmd.jpg" width="430">
+<img src="Layout_cmd.jpg" width="500">
 </td>
 
 <td>
-<img src="Layout_terminal.jpg" width="430">
+<img src="Layout_terminal.jpg" width="500">
 </td>
 
 </tr>
@@ -247,11 +250,11 @@ OpenLane will automatically perform:
 <tr>
 
 <td>
-<img src="Layout_terminal_next.jpg" width="430">
+<img src="Layout_terminal_next.jpg" width="500">
 </td>
 
 <td>
-<img src="Layout_terminal_next2.jpg" width="430">
+<img src="Layout_terminal_next2.jpg" width="500">
 </td>
 
 </tr>
@@ -259,7 +262,7 @@ OpenLane will automatically perform:
 <tr>
 
 <td colspan="2" align="center">
-<img src="Layout_terminal_next3.jpg" width="700">
+<img src="Layout_terminal_next3.jpg" width="500">
 </td>
 
 </tr>
