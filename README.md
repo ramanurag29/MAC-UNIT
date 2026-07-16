@@ -352,11 +352,11 @@ The complete **RTL → GDSII** implementation of the **MAC Unit** has been succe
 
 This design can be further extended into:
 
-- ✅ Multi-MAC Arrays
-- ✅ Pipelined Architectures
-- ✅ Systolic Arrays
-- ✅ Matrix Multiplication Engines
-- ✅ CNN / AI Accelerators
-- ✅ FPGA Implementations
+- Multi-MAC Arrays
+- Pipelined Architectures
+- Systolic Arrays
+- Matrix Multiplication Engines
+- CNN / AI Accelerators
+- FPGA Implementations
 
 ---
